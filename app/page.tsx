@@ -3,21 +3,27 @@
  * @see https://v0.dev/t/0uU3KVXBEiA
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import Link from "next/link"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { JSX, SVGProps } from "react"
+import Link from "next/link";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { JSX, SVGProps } from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
+    <div className="flex min-h-[100dvh] flex-col">
+      <header className="flex h-14 items-center px-4 lg:px-6">
+        <Link
+          className="flex items-center justify-center"
+          href="https://aguilaritsolutions.com"
+        >
           <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span className="sr-only">Aguilar IT Solutions</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="https://francisaguilar.co">
+          <Link
+            className="text-sm font-medium underline-offset-4 hover:underline"
+            href="https://francisaguilar.co"
+          >
             About Francis Aguilar
           </Link>
         </nav>
@@ -29,9 +35,9 @@ export default function Home() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 IT Solutions for the Modern Business
               </h1>
-              <p className="mx-auto my-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Transform your business with our innovative technology solutions. Let us handle the tech, so you can
-                focus on growth.
+              <p className="mx-auto my-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Transform your business with our innovative technology
+                solutions. Let us handle the tech, so you can focus on growth.
               </p>
             </div>
             <div className="flex w-full space-y-2">
@@ -49,14 +55,18 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400 mx-auto">© 2024 Aguilar IT Solutions. All rights reserved.</p>
+      <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
+        <p className="mx-auto text-xs text-gray-500 dark:text-gray-400">
+          © 2024 Aguilar IT Solutions. All rights reserved.
+        </p>
       </footer>
     </div>
-  )
+  );
 }
 
-function MountainIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+function MountainIcon(
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
+) {
   return (
     <svg
       {...props}
@@ -72,5 +82,5 @@ function MountainIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) 
     >
       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
-  )
+  );
 }

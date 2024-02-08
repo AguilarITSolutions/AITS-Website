@@ -23,5 +23,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Troubleshooting
 
 ### 1. Cannot find '_package_' module or its corresponding type declarations.ts (2307)
+
 ![Screenshot 2024-02-06 at 10 29 24 PM](https://github.com/AguilarITSolutions/aits-nextjs-template/assets/25190540/a80ab38d-7990-4359-8ae9-5722318b4da9)
+
 - Read the Stackoverlow answer: https://stackoverflow.com/a/69238902
