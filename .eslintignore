@@ -1,2 +1,5 @@
 node_modules
-.eslintrc.js
+.eslintrc.json
+prettier.config.js
+postcss.config.js
+next.config.mjs
