@@ -35,7 +35,7 @@ export default function Home() {
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 IT Solutions for the Modern Business
               </h1>
-              <p className="mx-auto my-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="mx-auto my-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Transform your business with our innovative technology
                 solutions. Let us handle the tech, so you can focus on growth.
               </p>
