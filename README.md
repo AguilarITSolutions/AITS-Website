@@ -17,8 +17,14 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Dependencies
 
-- Yarn@4.0.2
-- Node@20.10.0
+- Yarn@4.7.0
+- Node@22.14.0
+
+## Notes
+
+### 1. Using `yarn-upgrade-all` to update all package versions to the latest
+
+- Read about the package at https://www.npmjs.com/package/yarn-upgrade-all
 
 ## Troubleshooting
 
