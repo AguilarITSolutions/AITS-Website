@@ -1,86 +1,41 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/0uU3KVXBEiA
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { JSX, SVGProps } from "react";
+import Hero from "@/components/hero";
+import Services from "@/components/services";
+import CTA from "@/components/cta";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import FadeIn from "@/components/fade-in";
 
 export default function Home() {
   return (
-    <div className="flex min-h-[100dvh] flex-col">
-      <header className="flex h-14 items-center px-4 lg:px-6">
-        <Link
-          className="flex items-center justify-center"
-          href="https://aguilaritsolutions.com"
-        >
-          <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Aguilar IT Solutions</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium underline-offset-4 hover:underline"
-            href="https://francisaguilar.co"
-          >
-            About Francis Aguilar
-          </Link>
-        </nav>
-      </header>
-      <main className="flex-1">
-        <section className="w-full py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
-            <div className="text-center">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                IT Solutions for the Modern Business
-              </h1>
-              <p className="mx-auto my-4 max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Transform your business with our innovative technology
-                solutions. Let us handle the tech, so you can focus on growth.
-              </p>
-            </div>
-            <div className="flex w-full space-y-2">
-              {/* <form className="flex space-x-2">
-                <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" />
-                <Button type="submit">Sign Up</Button>
-              </form>
-              <p className="text-xs mx-auto text-gray-500 dark:text-gray-400">
-                Sign up to get notified when we launch.
-              </p> */}
-              <h1 className="mx-auto text-xl font-bold tracking-tighter sm:text-3xl xl:text-4xl/none">
-                We'll be launching soon. Stay tuned.
-              </h1>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
-        <p className="mx-auto text-xs text-gray-500 dark:text-gray-400">
-          © 2024 Aguilar IT Solutions. All rights reserved.
-        </p>
-      </footer>
-    </div>
-  );
-}
+    <div className="relative min-h-screen">
+      {/* Background gradients */}
+      <div className="pointer-events-none fixed inset-0">
+        <div className="from-background via-background/90 to-background absolute inset-0 bg-gradient-to-b" />
+        <div className="absolute top-0 right-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
+      </div>
 
-function MountainIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
-) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
+      <div className="relative z-10">
+        <FadeIn delay={100} duration={600}>
+          <Navbar />
+        </FadeIn>
+
+        <FadeIn delay={300} duration={800}>
+          <Hero />
+        </FadeIn>
+
+        <FadeIn delay={600} duration={800}>
+          <Services />
+        </FadeIn>
+
+        <FadeIn delay={800} duration={800}>
+          <CTA />
+        </FadeIn>
+
+        <FadeIn delay={1000} duration={800}>
+          <Footer />
+        </FadeIn>
+      </div>
+    </div>
   );
 }
