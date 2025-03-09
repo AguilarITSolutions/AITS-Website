@@ -1,25 +1,29 @@
 import { Brain, Cloud, Shield, Zap } from "lucide-react";
-import FadeIn from "@/components/fade-in"
+import FadeIn from "@/components/fade-in";
 
 const services = [
   {
     name: "Process Analysis & Automation",
-    description: "Automate repetitive tasks and streamline processes to save time and money.",
+    description:
+      "Automate repetitive tasks and streamline processes to save time and money.",
     icon: Brain,
   },
   {
     name: "Custom Application Development",
-    description: "Tailored solutions to meet your unique business needs and requirements.",
+    description:
+      "Tailored solutions to meet your unique business needs and requirements.",
     icon: Cloud,
   },
   {
     name: "System & Cloud Migration",
-    description: "Modernize your systems and migrate to the cloud for improved scalability and security.",
+    description:
+      "Modernize your systems and migrate to the cloud for improved scalability and security.",
     icon: Shield,
   },
   {
     name: "System Enhancement & Extension",
-    description: "Enhance existing applications to match your changing business needs.",
+    description:
+      "Enhance existing applications to match your changing business needs.",
     icon: Zap,
   },
 ];
@@ -33,7 +37,8 @@ export default function Services() {
             Modern Solutions for Evolving Businesses
           </h2>
           <p className="text-muted-foreground mt-4 sm:text-lg">
-            Discover how Aguilar IT Solutions can transform your business and help you grow.
+            Discover how Aguilar IT Solutions can transform your business and
+            help you grow.
           </p>
         </div>
       </FadeIn>
@@ -45,7 +50,9 @@ export default function Services() {
                 <feature.icon className="h-8 w-8" />
                 <h3 className="font-bold">{feature.name}</h3>
               </div>
-              <p className="text-muted-foreground mt-2">{feature.description}</p>
+              <p className="text-muted-foreground mt-2">
+                {feature.description}
+              </p>
             </div>
           </FadeIn>
         ))}

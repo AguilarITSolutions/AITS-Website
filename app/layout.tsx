@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type React from "react";
 import "./globals.css";
-import FadeIn from "@/components/fade-in"
+import FadeIn from "@/components/fade-in";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,9 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${inter.className} bg-background text-foreground antialiased`}>
+      <body
+        className={`${inter.className} bg-background text-foreground antialiased`}
+      >
         <MouseMoveEffect />
         <FadeIn delay={100} duration={600}>
           {children}

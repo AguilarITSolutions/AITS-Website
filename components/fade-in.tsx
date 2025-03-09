@@ -1,35 +1,43 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useEffect, useState } from "react"
-import { cn } from "@/lib/utils"
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface FadeInProps {
-  children: React.ReactNode
-  delay?: number
-  duration?: number
-  className?: string
+  children: React.ReactNode;
+  delay?: number;
+  duration?: number;
+  className?: string;
 }
 
-export default function FadeIn({ children, delay = 0, duration = 500, className }: FadeInProps) {
-  const [isVisible, setIsVisible] = useState(false)
+export default function FadeIn({
+  children,
+  delay = 0,
+  duration = 500,
+  className,
+}: FadeInProps) {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, delay)
+      setIsVisible(true);
+    }, delay);
 
-    return () => clearTimeout(timer)
-  }, [delay])
+    return () => clearTimeout(timer);
+  }, [delay]);
 
   return (
     <div
-      className={cn("transition-opacity duration-500 ease-in-out", isVisible ? "opacity-100" : "opacity-0", className)}
+      className={cn(
+        "transition-opacity duration-500 ease-in-out",
+        isVisible ? "opacity-100" : "opacity-0",
+        className,
+      )}
       style={{ transitionDuration: `${duration}ms` }}
     >
       {children}
     </div>
-  )
+  );
 }
-

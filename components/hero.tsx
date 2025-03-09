@@ -9,11 +9,11 @@ export default function Hero() {
           IT Solutions for the Modern Business
         </h1>
         <p className="text-muted-foreground mx-auto max-w-[42rem] leading-normal sm:text-lg sm:leading-8">
-          Let us handle the tech. <br/>
+          Let us handle the tech. <br />
           Just focus on growing your business.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col gap-4 md:flex-row">
         <Button size="lg">
           Explore Solutions
           <ArrowRight className="ml-2 h-4 w-4" />
@@ -22,7 +22,6 @@ export default function Hero() {
           Schedule a Demo
         </Button>
       </div>
-
     </section>
   );
 }
