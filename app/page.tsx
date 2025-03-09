@@ -1,5 +1,5 @@
 import Hero from "@/components/hero"
-import Features from "@/components/features"
+import Services from "@/components/services"
 import CTA from "@/components/cta"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
@@ -25,7 +25,7 @@ export default function Home() {
         </FadeIn>
 
         <FadeIn delay={600} duration={800}>
-          <Features />
+          <Services />
         </FadeIn>
 
         <FadeIn delay={800} duration={800}>
