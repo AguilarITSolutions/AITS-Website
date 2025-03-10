@@ -1,5 +1,5 @@
+import { Github } from "lucide-react";
 import Link from "next/link";
-import { Github, Twitter, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -58,25 +58,11 @@ export default function Footer() {
             <h3 className="text-sm font-medium">Connect</h3>
             <div className="flex space-x-4">
               <Link
-                href="https://github.com/amanesoft"
+                href="https://github.com/AguilarITSolutions"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
-              </Link>
-              <Link
-                href="https://twitter.com/amanesoft"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link
-                href="https://linkedin.com/company/amanesoft"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
           </div>
@@ -84,7 +70,8 @@ export default function Footer() {
       </div>
       <div className="container border-t py-6">
         <p className="text-muted-foreground text-center text-sm">
-          © {new Date().getFullYear()} Amane Soft, Inc. All rights reserved.
+          © {new Date().getFullYear()} Aguilar IT Solutions. All rights
+          reserved.
         </p>
       </div>
     </footer>

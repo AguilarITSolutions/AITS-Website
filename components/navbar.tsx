@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Github, Menu, MountainIcon, X } from "lucide-react";
+import { Menu, MountainIcon, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import FadeIn from "./fade-in";
@@ -71,16 +71,6 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden items-center space-x-4 md:flex">
-            <Link
-              href="https://github.com/amanesoft"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button variant="ghost" size="icon">
-                <Github className="h-4 w-4" />
-                <span className="sr-only">GitHub</span>
-              </Button>
-            </Link>
             <Button variant="ghost" size="sm">
               Contact
             </Button>
