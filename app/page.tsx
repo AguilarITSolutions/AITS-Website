@@ -4,38 +4,55 @@ import CTA from "@/components/cta";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import FadeIn from "@/components/fade-in";
+import { Link } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
-      {/* Background gradients */}
-      <div className="pointer-events-none fixed inset-0">
-        <div className="from-background via-background/90 to-background absolute inset-0 bg-gradient-to-b" />
-        <div className="absolute top-0 right-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
-      </div>
+    <div className="flex min-h-[100dvh] flex-col">
+      <main className="flex-1">
+        <section className="w-full py-4 sm:py-10 md:py-16 lg:py-24 xl:py-32">
+          <div className="relative z-10">
+            <FadeIn delay={100} duration={600}>
+              <Navbar />
+            </FadeIn>
 
-      <div className="relative z-10">
-        <FadeIn delay={100} duration={600}>
-          <Navbar />
-        </FadeIn>
+            <FadeIn delay={300} duration={800}>
+              <Hero />
+            </FadeIn>
 
-        <FadeIn delay={300} duration={800}>
-          <Hero />
-        </FadeIn>
+            <FadeIn delay={600} duration={800}>
+              <Services />
+            </FadeIn>
 
-        <FadeIn delay={600} duration={800}>
-          <Services />
-        </FadeIn>
+            <FadeIn delay={800} duration={800}>
+              <CTA />
+            </FadeIn>
 
-        <FadeIn delay={800} duration={800}>
-          <CTA />
-        </FadeIn>
-
-        <FadeIn delay={1000} duration={800}>
-          <Footer />
-        </FadeIn>
-      </div>
+            <FadeIn delay={1000} duration={800}>
+              <Footer />
+            </FadeIn>
+          </div>
+        </section>
+      </main>
+      <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          © 2024 Aguilar IT Solutions. All rights reserved.
+        </p>
+        <nav className="flex gap-4 sm:ml-auto sm:gap-6">
+          <Link
+            className="text-xs text-gray-500 underline-offset-4 hover:underline dark:text-gray-400"
+            href="/"
+          >
+            Terms & Conditions
+          </Link>
+          <Link
+            className="text-xs text-gray-500 underline-offset-4 hover:underline dark:text-gray-400"
+            href="/"
+          >
+            Privacy Policy
+          </Link>
+        </nav>
+      </footer>
     </div>
   );
 }
