@@ -30,7 +30,7 @@ const eslintConfig = [
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "next",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
   ),
   {
     rules: {
