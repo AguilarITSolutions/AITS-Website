@@ -1,11 +1,18 @@
 import MouseMoveEffect from "@/components/mouse-move-effect";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import type React from "react";
 import "./globals.css";
 import FadeIn from "@/components/fade-in";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+});
 
 export const metadata: Metadata = {
   title: "Aguilar IT Solutions",
@@ -23,7 +30,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
-        className={`${inter.className} bg-background text-foreground antialiased`}
+        className={`${montserrat.variable} ${openSans.variable} bg-background text-foreground font-sans antialiased`}
       >
         <MouseMoveEffect />
         <FadeIn delay={100} duration={600}>

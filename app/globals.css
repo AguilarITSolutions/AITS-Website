@@ -3,6 +3,12 @@
 
 @layer base {
   :root {
+    /* AITS brand palette (Section 3.2 of the revamp plan) */
+    --aits-primary: #005ba4;
+    --aits-accent: #004578;
+    --aits-gray: #4a4a4a;
+    --aits-light-blue: #cfe0f0;
+
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
