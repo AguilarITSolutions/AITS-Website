@@ -79,9 +79,13 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="relative space-y-6"
+      noValidate
+    >
       {/* Honeypot field — hidden from real users, visible to bots that fill every field */}
-      <div className="absolute -left-[9999px]" aria-hidden="true">
+      <div className="absolute left-[-9999px]" aria-hidden="true">
         <label htmlFor="company_website">Leave this field blank</label>
         <input
           id="company_website"

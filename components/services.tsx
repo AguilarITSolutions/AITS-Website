@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <section id="services" className="container space-y-16 py-16 md:py-24">
       <ScrollReveal>
-        <div className="mx-auto max-w-[58rem] text-center">
+        <div className="mx-auto max-w-232 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] font-bold sm:text-3xl md:text-5xl">
             Modern Solutions for Evolving Businesses
           </h2>

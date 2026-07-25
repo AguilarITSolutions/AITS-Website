@@ -14,7 +14,10 @@ export default function FAQ() {
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-heading text-3xl leading-[1.1] font-bold sm:text-3xl md:text-5xl">
-              Got questions? We have answers.
+              Got questions?
+            </h2>
+            <h2 className="font-heading text-3xl leading-[1.1] font-bold sm:text-3xl md:text-5xl">
+              We have answers.
             </h2>
             <p className="text-muted-foreground mt-4 sm:text-lg">
               Can&apos;t find what you&apos;re looking for?{" "}

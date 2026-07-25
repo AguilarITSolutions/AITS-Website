@@ -8,20 +8,20 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { team, values, timeline } from "@/lib/team";
 
 export const metadata: Metadata = {
-  title: "About Us | Aguilar IT Solutions",
+  title: "About | Aguilar IT Solutions",
   description:
     "Learn about Aguilar IT Solutions' mission, values, and the team behind our IT consulting and software delivery work.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-[100dvh] flex-col">
+    <div className="flex min-h-dvh flex-col">
       <Navbar />
       <main className="flex-1">
         <PageHeader
-          eyebrow="About Us"
-          title="Technology partners, not just vendors"
-          description="Aguilar IT Solutions was founded to help growing businesses get out of their own way, technically, so they can focus on what they do best."
+          eyebrow="About Aguilar Information technology solutions"
+          title="Your technology partner, not just your vendor"
+          description="Aguilar IT Solutions was founded to help growing businesses streamline their process so they can focus on what they do best."
         />
 
         {/* Mission */}
@@ -38,7 +38,7 @@ export default function AboutPage() {
           <ScrollReveal delay={0.1}>
             <div
               aria-hidden="true"
-              className="from-aits-light-blue to-aits-primary/30 aspect-[4/3] rounded-2xl bg-gradient-to-br"
+              className="from-aits-light-blue to-aits-primary/30 aspect-4/3 rounded-2xl bg-linear-to-br"
             />
           </ScrollReveal>
         </section>

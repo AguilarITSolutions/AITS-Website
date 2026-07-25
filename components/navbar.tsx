@@ -1,9 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site-config";
+import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import FadeIn from "./fade-in";
@@ -13,15 +14,20 @@ export default function Navbar() {
 
   return (
     <header className="border-border/40 bg-background/95 supports-backdrop-filter:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <span className="font-heading text-lg font-extrabold tracking-tight">
-            Aguilar IT Solutions
-          </span>
+      <div className="container flex h-14 max-w-screen-2xl items-center justify-between md:justify-center">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Aguilar IT Solutions"
+            width={140}
+            height={32}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium md:mx-16 md:flex lg:mx-48">
           {siteConfig.navLinks.map((link) => (
             <Link
               key={link.name}
@@ -34,14 +40,14 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden items-center space-x-4 md:flex">
+        <div className="hidden items-center md:flex">
           <Button size="sm" asChild>
             <Link href="/contact">Get in Touch</Link>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex flex-1 justify-end md:hidden">
+        <div className="md:hidden">
           <Button
             variant="ghost"
             size="icon"
@@ -83,14 +89,6 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-
-          <div className="border-border/40 flex flex-col space-y-2 border-t pt-2">
-            <Button size="sm" className="justify-start" asChild>
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                Get in Touch
-              </Link>
-            </Button>
-          </div>
         </FadeIn>
       </div>
     </header>
