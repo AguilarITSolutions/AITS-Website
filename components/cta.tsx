@@ -1,20 +1,23 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import ScrollReveal from "@/components/scroll-reveal";
 
 export default function CTA() {
   return (
-    <section className="border-t">
-      <div className="container flex flex-col items-center gap-4 py-24 text-center md:py-32">
-        <h2 className="text-3xl leading-[1.1] font-bold sm:text-3xl md:text-5xl">
-          Ready to modernize your business?
-        </h2>
-        <p className="text-muted-foreground max-w-[42rem] leading-normal sm:text-xl sm:leading-8">
-          Join leading companies who trust Aguilar IT Solutions to drive their
-          digital transformation and stay ahead in the rapidly evolving tech
-          landscape.
-        </p>
-        <Button size="lg" className="mt-4">
-          Get Started Today
-        </Button>
+    <section className="bg-aits-primary border-t text-white">
+      <div className="container flex flex-col items-center gap-4 py-16 text-center md:py-24">
+        <ScrollReveal className="flex flex-col items-center gap-4">
+          <h2 className="font-heading text-3xl leading-[1.1] font-bold sm:text-3xl md:text-5xl">
+            Ready to modernize your business?
+          </h2>
+          <p className="max-w-[42rem] leading-normal text-white/85 sm:text-xl sm:leading-8">
+            Let&apos;s talk about what&apos;s slowing your team down, and how we
+            can fix it.
+          </p>
+          <Button size="lg" variant="secondary" className="mt-4" asChild>
+            <Link href="/contact">Get in Touch</Link>
+          </Button>
+        </ScrollReveal>
       </div>
     </section>
   );
