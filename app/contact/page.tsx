@@ -15,25 +15,32 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="flex min-h-[100dvh] flex-col">
+    <div className="flex min-h-dvh flex-col">
       <Navbar />
       <main className="flex-1">
         <PageHeader
           eyebrow="Contact"
           title="Let's talk"
-          description="Tell us a bit about your business and what's slowing you down. We'll get back to you within one business day."
+          description={
+            <>
+              Tell us a bit about your business and what&apos;s slowing you
+              down.
+              <br />
+              We&apos;ll get back to you within one business day.
+            </>
+          }
         />
 
-        <section className="container grid max-w-5xl grid-cols-1 gap-12 py-16 md:grid-cols-3 md:py-24">
-          <ScrollReveal className="md:col-span-2">
+        <section className="container max-w-3xl space-y-12 py-16 md:py-24">
+          <ScrollReveal>
             <ContactForm />
           </ScrollReveal>
-          <ScrollReveal delay={0.1} className="space-y-6">
-            <div>
+          <ScrollReveal delay={0.1}>
+            <div className="text-center">
               <h2 className="font-heading font-bold">Email us directly</h2>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-aits-primary mt-1 flex items-center gap-2 text-sm hover:underline"
+                className="text-aits-primary mt-1 flex items-center justify-center gap-2 text-sm hover:underline"
               >
                 <Mail className="h-4 w-4" />
                 {siteConfig.email}

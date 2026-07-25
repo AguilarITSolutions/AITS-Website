@@ -41,15 +41,6 @@ export default function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-2 text-white/70 transition-colors hover:text-white"
-                >
-                  <Mail className="h-4 w-4" />
-                  {siteConfig.email}
-                </a>
-              </li>
             </ul>
           </div>
           <div className="space-y-4">

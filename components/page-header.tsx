@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/scroll-reveal";
 interface PageHeaderProps {
   eyebrow?: string;
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   children?: React.ReactNode;
 }
 
