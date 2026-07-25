@@ -9,7 +9,7 @@ export default function CaseStudyHighlights() {
   return (
     <section className="container space-y-12 py-16 md:py-24">
       <ScrollReveal>
-        <div className="mx-auto max-w-[58rem] text-center">
+        <div className="mx-auto max-w-232 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] font-bold sm:text-3xl md:text-5xl">
             Real outcomes for real businesses
           </h2>

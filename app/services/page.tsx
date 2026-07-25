@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="flex min-h-[100dvh] flex-col">
+    <div className="flex min-h-dvh flex-col">
       <Navbar />
       <main className="flex-1">
         <PageHeader
