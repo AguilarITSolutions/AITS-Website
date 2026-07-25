@@ -27,7 +27,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 text-sm font-medium md:mx-16 md:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium md:mx-16 md:flex lg:mx-48">
           {siteConfig.navLinks.map((link) => (
             <Link
               key={link.name}
