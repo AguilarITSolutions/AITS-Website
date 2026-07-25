@@ -8,6 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["400", "700", "800"],
   variable: "--font-montserrat",
 });
 const openSans = Open_Sans({
@@ -42,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>

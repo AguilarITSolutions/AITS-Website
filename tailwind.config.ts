@@ -20,7 +20,12 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["var(--font-open-sans)", "Arial", "sans-serif"],
+        sans: [
+          "var(--font-montserrat)",
+          "var(--font-open-sans)",
+          "Arial",
+          "sans-serif",
+        ],
         heading: ["var(--font-montserrat)", "Arial", "sans-serif"],
       },
       colors: {
